@@ -31,18 +31,12 @@
            </tcp>
         </transport>
         <discovery>
-            <static>
+            <!-- <static>
                 <node>
-                    <!-- replace this IP with the IP address of your interface -->
-                    <host>0.0.0.0</host>
+                    <host></host>
                     <port>7800</port>
                 </node>
-                <!-- <node>
-                    replace this IP with the IP address & Port of another node in the cluster
-                    <host>192.168.1.2</host>
-                    <port>7800</port>
-                </node> -->
-            </static>
+            </static> -->
         </discovery>
 
     </cluster>
