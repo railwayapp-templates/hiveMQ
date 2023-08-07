@@ -26,17 +26,17 @@
         <enabled>true</enabled>
         <transport>
            <tcp>
-                <bind-address>0.0.0.0</bind-address>
+                <bind-address>railway</bind-address>
                 <bind-port>7800</bind-port>
            </tcp>
         </transport>
         <discovery>
-            <!-- <static>
+            <static>
                 <node>
-                    <host></host>
+                    <host>railway</host>
                     <port>7800</port>
                 </node>
-            </static> -->
+            </static>
         </discovery>
 
     </cluster>
