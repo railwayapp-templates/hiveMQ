@@ -26,7 +26,7 @@
         <enabled>true</enabled>
         <transport>
            <tcp>
-                <bind-address>railway</bind-address>
+                <bind-address>0.0.0.0</bind-address>
                 <bind-port>7800</bind-port>
            </tcp>
         </transport>
