@@ -38,8 +38,16 @@
                 </node>
             </static>
         </discovery>
-
     </cluster>
+    <control-center>
+        <enabled>true</enabled>
+        <listeners>
+            <http>
+                <port>8080</port>
+                <bind-address>0.0.0.0</bind-address>
+            </http>
+        </listeners>
+    </control-center>
 
     <restrictions>
         <max-client-id-length>65535</max-client-id-length>
