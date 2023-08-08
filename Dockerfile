@@ -1,5 +1,7 @@
 # Use the official HiveMQ Docker image as the base image
 FROM hivemq/hivemq-ce
+# For Enterprise Edition use the following base image
+# FROM hivemq/hivemq4
 
 # Copy custom configuration files into the container
 COPY config.xml /opt/hivemq/conf/config.xml

@@ -7,6 +7,8 @@ This example deploys a self-hosted version of [HiveMQ](https://www.hivemq.com/).
 ## What is HiveMQ?
 HiveMQ is a high-performance, enterprise-grade MQTT (Message Queuing Telemetry Transport) broker that enables seamless communication between devices and applications using the MQTT protocol. MQTT is widely used for real-time data exchange and communication in IoT (Internet of Things) applications, where low bandwidth and reliable messaging are crucial. HiveMQ provides various features and options for deploying it in high availability and clustered configurations. 
 
+This container is based on community edition docker image and doesn't have control center feature. If you want Enterprise Edition then update the config.xml file with necessary license information and update the Dockerfile with the Enterprise Edition base image. But project is configured to work for any docker image of hiveMQ.
+
 ## Features
 1. MQTT 5.0 Support: HiveMQ supports the MQTT 5.0 specification, providing advanced features such as shared subscriptions, enhanced security, message properties, and more.
 2. High Performance: HiveMQ is designed for high performance and low latency, making it suitable for applications that require real-time communication.
