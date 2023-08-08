@@ -28,6 +28,26 @@ HiveMQ is a high-performance, enterprise-grade MQTT (Message Queuing Telemetry T
 - Click the Railway button 👆
 - Add the required environment variables
 - Deploy
+- Access HiveMQ Control Center from Railway URL
+- Use can login using default credentials `admin` and `hivemq`
+![login](img/login.png)
+- You should see the dashboard with all analytics and metrics of your HiveMQ instance with connected clients and messages infomration in real-time
+![dashboard](img/dashboard.png)
+- You can also use the MQTT Websocket client to publish and subscribe to topics
+- By default, the MQTT Websocket client is available at `https://<your-railway-url>/mqtt`
+- With help of reference python code `example.py` you can test your HiveMQ instance
+![example](img/python.png)
+- You can also view real-time client infomration from the HiveMQ Control Center
+![clients](img/client.png)
+- Also you can disconnect clients from the HiveMQ Control Center
+- HiveMQ also provides options for subcriptions and topics
+![topics](img/subcriptions.png)
+- Using trace functionality you can view all the messages that are published and subscribed
+![trace](img/trace.png)
+- Finally, you can backup and restore your HiveMQ instance from the HiveMQ Control Center
+![backup](img/backup.png)
+- Instance is configured with cluster with static discovery. you can add multiple instances to the cluster by modifying the config file `config.xml` and adding the instances to the `static-discovery` section. Follow the official docs for more information.
+- Enjoy 🎉
 
 ## 📝 Notes
 

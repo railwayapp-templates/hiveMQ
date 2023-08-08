@@ -1,5 +1,5 @@
 # Use the official HiveMQ Docker image as the base image
-FROM hivemq/hivemq4
+FROM hivemq/hivemq4-ce
 
 # Copy custom configuration files into the container
 COPY config.xml /opt/hivemq/conf/config.xml
@@ -16,3 +16,5 @@ COPY nginx.conf /etc/nginx/nginx.conf
 
 # Expose Nginx HTTP port
 EXPOSE 80
+
+CMD service nginx start && /opt/hivemq/bin/run.sh
