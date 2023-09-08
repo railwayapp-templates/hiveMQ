@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<hivemq xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <listeners>
+        <tcp-listener>
+            <name>mqtt-listener</name>
+            <port>1883</port>
+            <bind-address>0.0.0.0</bind-address>
+        </tcp-listener>
+
+        <!-- Basic WebSocket connection -->
+        <websocket-listener>
+            <port>8000</port>
+            <bind-address>0.0.0.0</bind-address>
+            <path>/mqtt</path>
+            <name>websocket-listener</name>
+            <subprotocols>
+                <subprotocol>mqttv3.1</subprotocol>
+                <subprotocol>mqtt</subprotocol>
+            </subprotocols>
+            <allow-extensions>true</allow-extensions>
+        </websocket-listener>
+    </listeners>
+
+    <cluster>
+        <enabled>true</enabled>
+        <transport>
+           <tcp>
+                <bind-address>0.0.0.0</bind-address>
+                <bind-port>7800</bind-port>
+           </tcp>
+        </transport>
+        <discovery>
+            <static>
+                <node>
+                    <host>railway</host>
+                    <port>7800</port>
+                </node>
+            </static>
+        </discovery>
+    </cluster>
+    <control-center>
+        <enabled>true</enabled>
+        <listeners>
+            <http>
+                <port>8080</port>
+                <bind-address>0.0.0.0</bind-address>
+            </http>
+        </listeners>
+    </control-center>
+
+    <restrictions>
+        <max-client-id-length>65535</max-client-id-length>
+        <max-topic-length>65535</max-topic-length>
+        <max-connections>-1</max-connections>
+        <incoming-bandwidth-throttling>0</incoming-bandwidth-throttling>
+        <no-connect-idle-timeout>10000</no-connect-idle-timeout>
+    </restrictions>
+
+</hivemq>
